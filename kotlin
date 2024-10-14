@@ -1,0 +1,45 @@
+import java.util.Scanner
+
+/*Escreva um programa que leia 10 números e armazene em um vetor. Em
+seguida, mostre as seguintes informações:
+a) Menor valor digitado
+b) Maior valor digitado
+c) Média dos valores digitados.*/
+
+
+fun main(args: Array<String>) {
+
+    var soma = 0
+    var menorNumero = Int.MAX_VALUE
+    var maiorNumero = Int.MIN_VALUE
+    var media: Double = 0.0
+    var n = IntArray(10)
+    val scanner = Scanner(System.`in`)
+
+    for (i in 0..9) {
+
+
+        println("Digite um numero")
+        n[i] = scanner.nextInt()
+
+    }
+
+    for (numero in n) {
+
+        if (numero > maiorNumero) {
+            maiorNumero = numero
+        }
+        if (numero < menorNumero) {
+            menorNumero = numero
+
+        }
+
+         soma += numero
+
+        media = soma.toDouble() / 10
+
+    }
+
+    println("O maior numero é: $maiorNumero\n o menor numero é: $menorNumero\n e a media será: $media\n ")
+
+}
